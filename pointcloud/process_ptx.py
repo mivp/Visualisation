@@ -85,6 +85,7 @@ for fn in sys.argv[2:]:
 
     #Iterate the scans
     for scan in ptxreader.load(fn):
+        print("Scan",count)
         outfile = os.path.splitext(os.path.basename(fn))[0] + '.' + str(count).zfill(3) + '.' + outext
         if os.path.exists(outfile):
             #Skip if output file exists
@@ -96,4 +97,6 @@ for fn in sys.argv[2:]:
             writeLAS(outfile, scan[0], scan[1]) 
         elif outext == 'csv':
            writeCSV(outfile, scan[0], scan[1][:,1:]) 
+
+        count += 1
 
