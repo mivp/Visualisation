@@ -13,7 +13,7 @@ Expects at least 7 fields, x,y,z,I,R,G,B
 """
 
 if len(sys.argv) < 3:
-    print "Usage: " + sys.argv[0] + " outformat(csv/las) input_files"
+    print("Usage: " + sys.argv[0] + " outformat(csv/las) input_files")
     exit(1)
 
 outext = sys.argv[1].lower()

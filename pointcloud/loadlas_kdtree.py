@@ -9,7 +9,7 @@ Experiment with kdtree on a point cloud
 """
 
 if len(sys.argv) < 2:
-    print "Usage: " + sys.argv[0] + " filepath"
+    print("Usage: " + sys.argv[0] + " filepath")
     exit(1)
 
 infile = laspy.file.File(sys.argv[1], mode="r")
@@ -47,9 +47,9 @@ print(minpt)
 
 #KDtree for finding nearest neighbour points
 from scipy import spatial
-from scipy.spatial import KDTree
 sys.setrecursionlimit(10000)
-tree = spatial.KDTree(verts3)
+tree = spatial.cKDTree(verts3)
+#tree = spatial.KDTree(verts3)
 
 #Query camera position
 print("Tree query")

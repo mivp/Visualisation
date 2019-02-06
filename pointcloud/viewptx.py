@@ -13,7 +13,7 @@ Expects at least 7 fields, x,y,z,I,R,G,B
 """
 
 if len(sys.argv) < 2:
-    print "Usage: " + sys.argv[0] + " filepath subsample"
+    print("Usage: " + sys.argv[0] + " filepath subsample")
     exit(1)
 
 fn = sys.argv[1]

@@ -5,7 +5,7 @@ import lavavu
 import numpy as np
 
 if len(sys.argv) < 2:
-    print "Usage: " + sys.argv[0] + " filepath subsample"
+    print("Usage: " + sys.argv[0] + " filepath subsample")
     exit(1)
 
 infile = laspy.file.File(sys.argv[1], mode="r")
